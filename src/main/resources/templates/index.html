@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+
+</head>
+<body>
+
+    <h1>Calculation Station</h1>
+
+    <form method="post" action="/">
+        <input type="number" name="firstNumber"/>
+        <input type="number" name="secondNumber"/>
+        <div class="form-group">
+            <label for="exampleSelect1">Example select</label>
+            <select class="form-control" name="operation" id="exampleSelect1">
+                <option value="+">Add</option>
+                <option value="*">Multiply</option>
+                <option value="/">Divide</option>
+                <option value="-">Subtract</option>
+            </select>
+        </div>
+        <input type="submit" value="Save"/>
+
+    </form>
+
+    <p>
+        Equation: <span th:text="${equation}"></span>
+        <break/>
+        Result: <span th:text="${result}"></span>
+    </p>
+</body>
+</html>
